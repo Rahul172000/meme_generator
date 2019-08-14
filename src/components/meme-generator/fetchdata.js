@@ -65,14 +65,14 @@ class Meme extends React.Component//class coz will make request to API
                 <Form changehandler={this.changehandler}/>
                 <br/>
                 <div className="main">
-                    <img src={this.state.randomimage} style={{width:"300px",marginLeft:"350px"}}/>
+                    <img src={this.state.randomimage} style={{width:"350px",marginLeft:"39%"}}/>
                     <h2 className="top">{this.state.toptext}</h2>
                     <h2 className="bottom">{this.state.bottomtext}</h2>
                 </div>
                 <br/><br/>
                 <hr/>
                 <br/><br/>
-                <a href="#here"><button style={{marginLeft:"360px"}} onClick={this.fetch}>{this.state.allmemeimages.length===0?"PRESS THIS TO VIEW MORE OPTIONS":"PRESS THIS TO HIDE OTHER OPTIONS"}</button></a>
+                <a href="#here"><button style={{marginLeft:"45%"}} onClick={this.fetch}>{this.state.allmemeimages.length===0?"PRESS THIS TO VIEW MORE OPTIONS":"PRESS THIS TO HIDE OTHER OPTIONS"}</button></a>
                 <br/><br/>
                 {this.state.load?<h1 id="here">LOADING...</h1>:<div id="here" className="options">{arr}</div>}
             </div>
