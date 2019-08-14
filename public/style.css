@@ -1,0 +1,85 @@
+header{
+    background-color: purple;
+    margin-top:20px;
+    display:flex;
+    justify-content: flex-start;
+    height:125px;
+}
+img{
+    margin-left:120px;
+    margin-top:15px;
+}
+.TOPIC{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:5px;
+    margin-left:190px;
+    font-weight: bolder;
+    font-size:25pt;
+    color:white;
+    font-family:'Times New Roman', Times, serif
+}
+form{
+    display: flex;
+    justify-content: space-around;
+}
+input{
+    width:250px;
+    background-color: lightpink;
+}
+input:hover{
+    background-color: pink;
+}
+input:focus{
+    background-color:plum;
+}
+button{
+    background-color:lightblue;
+    color:darkblue;
+    border-radius:25px;
+}
+button:hover{
+    font-weight:bold;
+}
+.options{
+    display:flex;
+    flex-wrap:wrap;
+}
+label{
+    margin:20px;
+}
+.title{
+    font-weight:bolder;
+    font-style:italic;
+}
+.main{
+    position:relative;
+}
+.main>img{
+    width:100%;
+}
+.main>h2{
+    position:absolute;
+    width:80%;
+    left:10%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow:
+    1px 1px 0 white,
+    -2px -2px 0 white,
+    1px -2px 0 white,
+    -2px 1px 0 whitesmoke,
+    0 1px 0 white,
+    1px 0 0 whitesmoke,
+    0 -2px 0 whitesmoke,
+    -2px 0 0 #000,
+    1px 1px 2px #000;
+}
+
+.top{
+    bottom:66%;
+}
+.bottom{
+    top:70%;
+}
