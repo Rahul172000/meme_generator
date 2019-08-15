@@ -11,6 +11,7 @@ class Meme extends React.Component//class coz will make request to API
             toptext:"",
             bottomtext:"",
             randomimage:"http://i.imgflip.com/1bij.jpg",
+            name:"One Does Not Simply",
             allmemeimages:[],
             load:false
         }
@@ -19,10 +20,11 @@ class Meme extends React.Component//class coz will make request to API
         this.fetch=this.fetch.bind(this)
     }
 
-    clickhandler(url)
+    clickhandler(url,namee)
     {
         this.setState({
-            randomimage:url
+            randomimage:url,
+            name:namee
         })
     }
 
@@ -55,10 +57,12 @@ class Meme extends React.Component//class coz will make request to API
     {
         let arr=[];
         if(this.state.allmemeimages.length!==0)
-        {arr=this.state.allmemeimages.map((item)=>{
+        {
+            arr=this.state.allmemeimages.map((item)=>{
+                console.log(this.state.name);
             if(item.name==="Expanding Brain"||item.name==="Boardroom Meeting Suggestion"||item.name==="American Chopper Argument"||item.name==="Inhaling Seagull"|item.name==="Tuxedo Winnie The Pooh"||item.name==="The Rock Driving"||item.name==="The Scroll Of Truth"||item.name==="Trump Bill Signing"||item.name==="Finding Neverland"||item.name==="Who Would Win?"||item.name==="Simba Shadowy Place"||item.name==="Marvel Civil War 1"||item.name==="Inception"||item.name==="Blank Starter Pack"||item.name==="Peter Parker Cry")
             {return null}
-            return (<Option key={item.id} obj={item} clickhandler={this.clickhandler}/>)
+            return (<Option key={item.id} obj={item} clickhandler={this.clickhandler} check={this.state.name}/>)
         })}
         return(
             <div>
